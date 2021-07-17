@@ -22,7 +22,10 @@
           <div class="flex items-center justify-items-center">
             <i class="fas fa-search z-20"></i>
             <div
-              style="background-image: linear-gradient(#FF5464, #FC9547); margin-left: 10px;"
+              style="
+                background-image: linear-gradient(#ff5464, #fc9547);
+                margin-left: 10px;
+              "
               class="rounded z-20"
             >
               <button class="text-white">Call Now: 01627125430</button>
@@ -45,14 +48,14 @@ export default {
   components: { TheHero },
   data() {
     return {
-      hideNav: false
+      hideNav: false,
     };
   },
   methods: {
     toggleBar() {
       this.hideNav = !this.hideNav;
-    }
-  }
+    },
+  },
 };
 </script>
 
