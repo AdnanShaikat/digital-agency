@@ -4,6 +4,7 @@
     viewBox="0 0 512 512"
     :width="width"
     height="height"
+    class="fill-current"
   >
     <g id="Outline">
       <path
@@ -17,14 +18,13 @@
 export default {
   props: {
     width: {
-      type: String,
+      type: String
     },
     height: {
-      type: String,
-    },
-  },
+      type: String
+    }
+  }
 };
 </script>
 
-<style>
-</style>
+<style></style>

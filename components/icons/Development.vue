@@ -3,6 +3,7 @@
     id="Capa_1"
     enable-background="new 0 0 512 512"
     :height="height"
+    class="fill-current"
     viewBox="0 0 512 512"
     :width="width"
     xmlns="http://www.w3.org/2000/svg"
@@ -28,14 +29,13 @@
 export default {
   props: {
     width: {
-      type: String,
+      type: String
     },
     height: {
-      type: String,
-    },
-  },
+      type: String
+    }
+  }
 };
 </script>
 
-<style>
-</style>
+<style></style>

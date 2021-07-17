@@ -28,7 +28,7 @@
               "
               class="rounded z-20"
             >
-              <button class="text-white">Call Now: 01627125430</button>
+              <button class="text-white z-20">Call Now: 01627125430</button>
             </div>
           </div>
         </div>
@@ -48,14 +48,14 @@ export default {
   components: { TheHero },
   data() {
     return {
-      hideNav: false,
+      hideNav: false
     };
   },
   methods: {
     toggleBar() {
       this.hideNav = !this.hideNav;
-    },
-  },
+    }
+  }
 };
 </script>
 

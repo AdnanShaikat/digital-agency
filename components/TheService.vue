@@ -1,5 +1,12 @@
 <template>
   <div class="container mx-auto mt-36">
+    <div class="shape-2">
+      <img
+        src="@/static/svgs/bgshape-1.svg"
+        style="height: 780px; width: 800px; position: absolute; top: 550px; left: -150px"
+        alt=""
+      />
+    </div>
     <div class="flex flex-col items-center justify-center">
       <p class="text-primary text-lg font-bold">Our Service</p>
       <h1 class="text-dark text-5xl font-bold mb-6">Awesome Service</h1>
@@ -35,7 +42,11 @@
 
       <div class="card text-center py-4 px-4 bg-white shadow-lg">
         <div class="card__header">
-          <Development height="50px" width="50px" class="mx-auto mb-4" />
+          <Development
+            height="50px"
+            width="50px"
+            class="mx-auto mb-4 text-primary"
+          />
         </div>
         <div class="card__content">
           <p class="font-bold text-xl">Web Development</p>
@@ -47,7 +58,7 @@
 
       <div class="card text-center py-4 px-4 bg-white shadow-lg">
         <div class="card__header">
-          <Seo height="65px" width="65px" class="mx-auto mb-4" />
+          <Seo height="50px" width="50px" class="mx-auto mb-4 text-primary" />
         </div>
         <div class="card__content">
           <p class="font-bold text-xl">Seo & Marketing</p>
@@ -70,8 +81,8 @@ export default {
     Idea,
     Research,
     Development,
-    Seo,
-  },
+    Seo
+  }
 };
 </script>
 
