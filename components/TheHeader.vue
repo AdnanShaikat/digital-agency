@@ -26,7 +26,7 @@
                 background-image: linear-gradient(#ff5464, #fc9547);
                 margin-left: 10px;
               "
-              class="rounded z-20"
+              class="rounded"
             >
               <button class="text-white z-20">Call Now: 01627125430</button>
             </div>

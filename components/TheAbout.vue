@@ -1,16 +1,18 @@
 <template>
   <div class="container mx-auto mb-24" style="postion: relative;">
-    <div class="flex">
-      <div class="w-1/2">
+    <div class="lg:flex lg:justify-between">
+      <div class="">
         <img
           src="@/static/svgs/about.svg"
-          style="height: 530px; width: 530px;"
+          style="height: 630px; width: 630px;"
           alt=""
         />
       </div>
-      <div class="w-1/2 mt-6">
+      <div class="lg:ml-36 mt-6">
         <p class="text-lg font-bold text-primary">About Us</p>
-        <h1 class="text-5xl font-bold mt-2">We're Desgin Trend Creatiors</h1>
+        <h1 class="md:text-5xl font-bold mt-2">
+          We're Desgin Trend Creatiors
+        </h1>
         <p class="text-sm text-gray mt-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit
           amet feugiat ligula, vel pulvinar sem. Etiam non vestibulum mi.

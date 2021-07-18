@@ -3,7 +3,7 @@
     <div class="hero flex justify-between mt-24">
       <div class="hero__text">
         <p class="text-lg text-primary font-bold">Welcome</p>
-        <p class="text-6xl md:text-5xl font-bold">
+        <p class="md:text-5xl font-bold">
           Smart Ideas For Your Brand Here
         </p>
         <p class="mt-4">
@@ -17,7 +17,7 @@
           <button class="text-white py-4 px-8">CONTACT US NOW</button>
         </div>
       </div>
-      <div class="hero__image z-10 md:ml-2"></div>
+      <div class="hero__image z-10"></div>
     </div>
   </div>
 </template>
