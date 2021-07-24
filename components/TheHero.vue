@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto">
-    <div class="hero flex justify-between mt-24">
+    <div class="hero lg:flex lg:justify-between mt-40">
       <div class="hero__text">
         <p class="text-lg text-primary font-bold">Welcome</p>
         <p class="md:text-5xl font-bold">

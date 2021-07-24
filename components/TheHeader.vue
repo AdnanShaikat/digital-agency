@@ -2,18 +2,30 @@
   <div class="header">
     <div class="header__shape z-0"></div>
     <nav>
-      <div class="container mx-auto flex items-center justify-between">
-        <div class="brand">
+      <div class="container mx-auto flex items-center relative justify-between">
+        <div class="brand z-10">
           <nuxt-link to="/"><p>BRAND</p></nuxt-link>
         </div>
         <div class="lg:block" :class="{ hidden: hideNav }">
-          <ul class="m-0 p-0 h-100 flex items-center">
+          <ul
+            class="m-0 p-0 h-100 lg:flex absolute right-0 top-full h-auto w-full bg-white items-center lg:bg-transparent lg:static z-0"
+          >
             <li class="font-bold h-100">
               <nuxt-link class="py-0 px-3" to="/home">Home</nuxt-link>
+            </li>
+            <li class="font-bold h-100">
               <nuxt-link class="py-0 px-3" to="/about">About Us</nuxt-link>
+            </li>
+            <li class="font-bold h-100">
               <nuxt-link class="py-0 px-3" to="/service">Service</nuxt-link>
+            </li>
+            <li class="font-bold h-100">
               <nuxt-link class="py-0 px-3" to="/pages">Pages</nuxt-link>
+            </li>
+            <li class="font-bold h-100">
               <nuxt-link class="py-0 px-3" to="/blog">Blog</nuxt-link>
+            </li>
+            <li class="font-bold h-100">
               <nuxt-link class="py-0 px-3" to="/contact">Contact</nuxt-link>
             </li>
           </ul>
