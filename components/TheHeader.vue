@@ -1,35 +1,84 @@
 <template>
   <div class="header">
     <div class="header__shape z-0"></div>
-    <nav>
-      <div class="container mx-auto flex items-center relative justify-between">
+    <nav class="container menu">
+      <div class="p-0 m-0 mx-auto flex items-center relative justify-between">
         <div class="brand z-10">
           <nuxt-link to="/"><p>BRAND</p></nuxt-link>
         </div>
-        <div class="lg:block" :class="{ hidden: hideNav }">
-          <ul
-            class="m-0 p-0 h-100 lg:flex absolute right-0 top-full h-auto w-full bg-white items-center lg:bg-transparent lg:static z-0"
-          >
+        <!-- nav -->
+        <div class="hidden lg:block">
+          <ul class="m-0 p-0 h-100 flex items-center z-0">
             <li class="font-bold h-100">
-              <nuxt-link class="py-0 px-3" to="/home">Home</nuxt-link>
+              <nuxt-link class="px-3" to="/home">Home</nuxt-link>
             </li>
             <li class="font-bold h-100">
-              <nuxt-link class="py-0 px-3" to="/about">About Us</nuxt-link>
+              <nuxt-link class="px-3" to="/about">About Us</nuxt-link>
             </li>
             <li class="font-bold h-100">
-              <nuxt-link class="py-0 px-3" to="/service">Service</nuxt-link>
+              <nuxt-link class="px-3" to="/service">Service</nuxt-link>
             </li>
             <li class="font-bold h-100">
-              <nuxt-link class="py-0 px-3" to="/pages">Pages</nuxt-link>
+              <nuxt-link class="px-3" to="/pages">Pages</nuxt-link>
             </li>
             <li class="font-bold h-100">
-              <nuxt-link class="py-0 px-3" to="/blog">Blog</nuxt-link>
+              <nuxt-link class="px-3" to="/blog">Blog</nuxt-link>
             </li>
             <li class="font-bold h-100">
-              <nuxt-link class="py-0 px-3" to="/contact">Contact</nuxt-link>
+              <nuxt-link class="px-3" to="/contact">Contact</nuxt-link>
             </li>
           </ul>
         </div>
+
+        <!-- hidden nav -->
+        <!-- <div class="lg:block" :class="{ hidden: hideNav }">
+          <ul
+            class="m-0 p-0 h-100 lg:flex absolute right-0 top-full h-auto w-full items-center bg-white lg:bg-transparent lg:static z-0"
+          >
+            <li class="font-bold h-100">
+              <nuxt-link
+                class="p-0 lg:px-3 lg:pb-0 inline-block pb-5"
+                to="/home"
+                >Home</nuxt-link
+              >
+            </li>
+            <li class="font-bold h-100">
+              <nuxt-link
+                class="p-0 lg:px-3 lg:pb-0 inline-block pb-5"
+                to="/about"
+                >About Us</nuxt-link
+              >
+            </li>
+            <li class="font-bold h-100">
+              <nuxt-link
+                class="p-0 lg:px-3 lg:pb-0 inline-block pb-5"
+                to="/service"
+                >Service</nuxt-link
+              >
+            </li>
+            <li class="font-bold h-100">
+              <nuxt-link
+                class="p-0 lg:px-3 lg:pb-0 inline-block pb-5"
+                to="/pages"
+                >Pages</nuxt-link
+              >
+            </li>
+            <li class="font-bold h-100">
+              <nuxt-link
+                class="p-0 lg:px-3 lg:pb-0 inline-block pb-5"
+                to="/blog"
+                >Blog</nuxt-link
+              >
+            </li>
+            <li class="font-bold h-100">
+              <nuxt-link
+                class="p-0 lg:px-3 lg:pb-0 inline-block pb-5"
+                to="/contact"
+                >Contact</nuxt-link
+              >
+            </li>
+          </ul>
+        </div> -->
         <div class="hidden lg:block">
           <div class="flex items-center justify-items-center">
             <i class="fas fa-search z-20"></i>
@@ -40,15 +89,47 @@
               "
               class="rounded"
             >
-              <button class="text-white z-20">Call Now: 01627125430</button>
+              <button class="text-white z-10">Call Now: 01627125430</button>
             </div>
           </div>
         </div>
-        <div class="menu-bar lg:hidden md:block z-20">
+        <div class="menu-bar lg:hidden z-20">
           <i @click="toggleBar" class="fas fa-bars text-primary text-2xl"></i>
         </div>
       </div>
     </nav>
+
+    <!-- Sidebar Nav -->
+    <div class="sidebar lg:hidden" :class="{ hidden: hideNav }">
+      <div class="sidebar__container">
+        <ul class="sidebar__links mt-5">
+          <li class="sidebar__item font-bold h-100">
+            <nuxt-link class="" to="/">Home</nuxt-link>
+          </li>
+
+          <li class="sidebar__item font-bold h-100">
+            <nuxt-link class="" to="/about">About Us</nuxt-link>
+          </li>
+
+          <li class="sidebar__item font-bold h-100">
+            <nuxt-link class="" to="/service">Service</nuxt-link>
+          </li>
+
+          <li class="sidebar__item font-bold h-100">
+            <nuxt-link class="" to="/pages">Pages</nuxt-link>
+          </li>
+
+          <li class="sidebar__item font-bold h-100">
+            <nuxt-link class="" to="/blog">Blog</nuxt-link>
+          </li>
+
+          <li class="sidebar__item font-bold h-100">
+            <nuxt-link class="" to="/Contact">Contact</nuxt-link>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Sidebar Nav -->
 
     <TheHero />
   </div>

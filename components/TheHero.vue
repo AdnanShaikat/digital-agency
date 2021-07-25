@@ -1,9 +1,11 @@
 <template>
   <div class="container mx-auto">
-    <div class="hero lg:flex lg:justify-between mt-40">
+    <div
+      class="hero flex flex-col items-center lg:flex-row lg:justify-between mt-28"
+    >
       <div class="hero__text">
         <p class="text-lg text-primary font-bold">Welcome</p>
-        <p class="md:text-5xl font-bold">
+        <p class="text-5xl font-bold">
           Smart Ideas For Your Brand Here
         </p>
         <p class="mt-4">

@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto mb-24" style="postion: relative;">
-    <div class="lg:flex lg:justify-between">
+    <div class="flex flex-col items-center lg:justify-between">
       <div class="">
         <img
           src="@/static/svgs/about.svg"
@@ -10,7 +10,7 @@
       </div>
       <div class="lg:ml-36 mt-6">
         <p class="text-lg font-bold text-primary">About Us</p>
-        <h1 class="md:text-5xl font-bold mt-2">
+        <h1 class="text-5xl font-bold mt-2">
           We're Desgin Trend Creatiors
         </h1>
         <p class="text-sm text-gray mt-4">
