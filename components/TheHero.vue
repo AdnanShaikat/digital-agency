@@ -19,7 +19,7 @@
           <button class="text-white py-4 px-8">CONTACT US NOW</button>
         </div>
       </div>
-      <div class="hero__image z-10"></div>
+      <div class="hero__image z-10 mt-10 lg:mt-0"></div>
     </div>
   </div>
 </template>

@@ -1,12 +1,5 @@
 <template>
   <div class="container mx-auto mt-36">
-    <div class="shape-2">
-      <img
-        src="@/static/svgs/bgshape-1.svg"
-        style="height: 686px; width: 685px; position: absolute; top: 900px; left: -40px; opacity: 10%;"
-        alt=""
-      />
-    </div>
     <div class="flex flex-col items-center justify-center">
       <p class="text-primary text-lg font-bold">Our Service</p>
       <h1 class="text-dark text-5xl font-bold mb-6">Awesome Service</h1>

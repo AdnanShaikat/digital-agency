@@ -1,6 +1,13 @@
 <template>
   <div class="container mx-auto mb-24" style="postion: relative;">
-    <div class="flex flex-col items-center lg:justify-between">
+    <div class="shape-2">
+      <img
+        src="@/static/svgs/bgshape-1.svg"
+        style="height: 686px; width: 685px; position: absolute; top: 900px; left: -40px; opacity: 5%;"
+        alt=""
+      />
+    </div>
+    <div class="flex flex-col items-center lg:flex-row lg:justify-between">
       <div class="">
         <img
           src="@/static/svgs/about.svg"

@@ -1,4 +1,16 @@
 .header {
+
+    &__shape {
+        background-image: url("@/static/svgs/bgshape-1.svg");
+        background-repeat: no-repeat;
+        height: 750px;
+        width: 800px;
+        position: absolute;
+        top: -150px;
+        right: -130px;
+        background-size: contain;
+        opacity: 10%;
+    }
     .menu {
         height: 60px;
     }
@@ -8,7 +20,7 @@
         width: 100%;
         position: fixed;
         background: rgba(0, 0, 0, 0.5);
-        height: 0;
+        height: 100%;
         z-index: 10000;
 
         &__container {
@@ -35,7 +47,7 @@
                 color: black;
 
                 &:hover {
-                    color: $primary;
+                    color: #FF5464;
                 }
             }
         }

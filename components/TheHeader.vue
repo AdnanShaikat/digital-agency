@@ -1,30 +1,30 @@
 <template>
   <div class="header">
     <div class="header__shape z-0"></div>
-    <nav class="container menu">
+    <nav class="container">
       <div class="p-0 m-0 mx-auto flex items-center relative justify-between">
-        <div class="brand z-10">
+        <div class="brand z-10 text-primary">
           <nuxt-link to="/"><p>BRAND</p></nuxt-link>
         </div>
         <!-- nav -->
         <div class="hidden lg:block">
           <ul class="m-0 p-0 h-100 flex items-center z-0">
-            <li class="font-bold h-100">
+            <li class="font-bold h-100 hover:text-primary">
               <nuxt-link class="px-3" to="/home">Home</nuxt-link>
             </li>
-            <li class="font-bold h-100">
+            <li class="font-bold h-100 hover:text-primary">
               <nuxt-link class="px-3" to="/about">About Us</nuxt-link>
             </li>
-            <li class="font-bold h-100">
+            <li class="font-bold h-100 hover:text-primary">
               <nuxt-link class="px-3" to="/service">Service</nuxt-link>
             </li>
-            <li class="font-bold h-100">
+            <li class="font-bold h-100 hover:text-primary">
               <nuxt-link class="px-3" to="/pages">Pages</nuxt-link>
             </li>
-            <li class="font-bold h-100">
+            <li class="font-bold h-100 hover:text-primary">
               <nuxt-link class="px-3" to="/blog">Blog</nuxt-link>
             </li>
-            <li class="font-bold h-100">
+            <li class="font-bold h-100 hover:text-primary">
               <nuxt-link class="px-3" to="/contact">Contact</nuxt-link>
             </li>
           </ul>
@@ -103,30 +103,50 @@
     <div class="sidebar lg:hidden" :class="{ hidden: hideNav }">
       <div class="sidebar__container">
         <ul class="sidebar__links mt-5">
-          <li class="sidebar__item font-bold h-100">
+          <li class="sidebar__item font-bold h-100 ">
             <nuxt-link class="" to="/">Home</nuxt-link>
           </li>
 
-          <li class="sidebar__item font-bold h-100">
+          <li class="sidebar__item font-bold h-100 ">
             <nuxt-link class="" to="/about">About Us</nuxt-link>
           </li>
 
-          <li class="sidebar__item font-bold h-100">
+          <li class="sidebar__item font-bold h-100 ">
             <nuxt-link class="" to="/service">Service</nuxt-link>
           </li>
 
-          <li class="sidebar__item font-bold h-100">
+          <li class="sidebar__item font-bold h-100 ">
             <nuxt-link class="" to="/pages">Pages</nuxt-link>
           </li>
 
-          <li class="sidebar__item font-bold h-100">
+          <li class="sidebar__item font-bold h-100 ">
             <nuxt-link class="" to="/blog">Blog</nuxt-link>
           </li>
 
-          <li class="sidebar__item font-bold h-100">
+          <li class="sidebar__item font-bold h-100 ">
             <nuxt-link class="" to="/Contact">Contact</nuxt-link>
           </li>
         </ul>
+
+        <div class="mt-5" style="padding: 10px 20px;">
+          <div class="flex flex-col items-center justify-center">
+            <div
+              class="text-center text-white bg-primary w-full py-4 mb-2 rounded"
+            >
+              <i class="fas fa-search"></i>
+            </div>
+            <div
+              style="
+                background-image: linear-gradient(#ff5464, #fc9547);
+              "
+              class="rounded w-full text-center py-4"
+            >
+              <button class="text-white">
+                Call Now: 01627125430
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- End Sidebar Nav -->
@@ -155,7 +175,6 @@ export default {
 <style lang="scss">
 .brand p {
   font-size: 40px;
-  color: #ff6376;
 }
 nav button {
   padding: 5px 15px;

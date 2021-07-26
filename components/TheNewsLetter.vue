@@ -27,7 +27,9 @@
       <!-- Newsletter -->
       <div class="flex flex-col items-center justify-center">
         <p class="text-lg text-white font-bold">NEWSLETTER</p>
-        <h1 class="text-5xl text-white font-bold">Subscribe Now!</h1>
+        <h1 class="text-3xl lg:text-5xl text-white font-bold">
+          Subscribe Now!
+        </h1>
         <p class="text-sm text-white text-center mt-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras eu tortor
           pulvinar eros vulputate consequa
