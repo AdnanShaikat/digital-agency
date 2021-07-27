@@ -1,0 +1,63 @@
+<template>
+  <div>
+    <div class="container">
+      <div class="testimonial mb-24">
+        <div class="testimonial__header text-center mb-5">
+          <p class="text-lg text-primary font-bold">Testimonial</p>
+          <h1 class="text-5xl font-bold">What Our Client Say</h1>
+        </div>
+        <!-- Testimonial Card -->
+        <div class="flex justify-center items-center">
+          <div class="testimonial__card bg-white shadow py-4 px-4">
+            <div class="flex items-center">
+              <div style="border-radius: 500px; height:80px; width:80px;">
+                <img
+                  src="@/static/images/client-1.jpg"
+                  alt=""
+                  style="height:100%; width:100%; object-fit:cover; border-radius: 500px"
+                />
+              </div>
+              <div class="ml-3">
+                <p class="text-lg font-bold">Johann Doe</p>
+                <small>DESIGNER</small>
+              </div>
+            </div>
+            <div class="mt-3">
+              In publishing and graphic design, Lorem ipsum is a placeholder
+              text commonly used to demonstrate the visual form of a document or
+              a typeface without relying on meaningful content
+            </div>
+          </div>
+
+          <div class="testimonial__card bg-white shadow ml-5 py-4 px-4">
+            <div class="flex items-center">
+              <div style="border-radius: 500px; height:80px; width:80px;">
+                <img
+                  src="@/static/images/client-2.jpg"
+                  alt=""
+                  style="height:100%; width:100%; object-fit:cover; border-radius: 500px"
+                />
+              </div>
+              <div class="ml-3">
+                <p class="text-lg font-bold">Johann Doe</p>
+                <small>DEVELOPER</small>
+              </div>
+            </div>
+            <div class="mt-3">
+              In publishing and graphic design, Lorem ipsum is a placeholder
+              text commonly used to demonstrate the visual form of a document or
+              a typeface without relying on meaningful content
+            </div>
+          </div>
+        </div>
+        <!-- End Testimonial Card -->
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style lang="scss"></style>
