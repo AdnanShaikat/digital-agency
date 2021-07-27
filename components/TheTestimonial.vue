@@ -7,49 +7,102 @@
           <h1 class="text-5xl font-bold">What Our Client Say</h1>
         </div>
         <!-- Testimonial Card -->
-        <div class="flex justify-center items-center">
-          <div class="testimonial__card bg-white shadow py-4 px-4">
-            <div class="flex items-center">
-              <div style="border-radius: 500px; height:80px; width:80px;">
-                <img
-                  src="@/static/images/client-1.jpg"
-                  alt=""
-                  style="height:100%; width:100%; object-fit:cover; border-radius: 500px"
-                />
-              </div>
-              <div class="ml-3">
-                <p class="text-lg font-bold">Johann Doe</p>
-                <small>DESIGNER</small>
-              </div>
-            </div>
-            <div class="mt-3">
-              In publishing and graphic design, Lorem ipsum is a placeholder
-              text commonly used to demonstrate the visual form of a document or
-              a typeface without relying on meaningful content
-            </div>
-          </div>
 
-          <div class="testimonial__card bg-white shadow ml-5 py-4 px-4">
-            <div class="flex items-center">
-              <div style="border-radius: 500px; height:80px; width:80px;">
-                <img
-                  src="@/static/images/client-2.jpg"
-                  alt=""
-                  style="height:100%; width:100%; object-fit:cover; border-radius: 500px"
-                />
+        <div class="flex justify-center items-center">
+          <splide :options="options">
+            <splide-slide>
+              <div class="testimonial__card bg-white shadow py-4 px-4">
+                <div class="flex items-center">
+                  <div style="border-radius: 500px; height:80px; width:80px;">
+                    <img
+                      src="@/static/images/client-1.jpg"
+                      alt=""
+                      style="height:100%; width:100%; object-fit:cover; border-radius: 500px"
+                    />
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-lg font-bold">Johann Doe</p>
+                    <small>DESIGNER</small>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  In publishing and graphic design, Lorem ipsum is a placeholder
+                  text commonly used to demonstrate the visual form of a
+                  document or a typeface without relying on meaningful content
+                </div>
               </div>
-              <div class="ml-3">
-                <p class="text-lg font-bold">Johann Doe</p>
-                <small>DEVELOPER</small>
+            </splide-slide>
+            <splide-slide>
+              <div class="testimonial__card bg-white shadow py-4 px-4">
+                <div class="flex items-center">
+                  <div style="border-radius: 500px; height:80px; width:80px;">
+                    <img
+                      src="@/static/images/client-2.jpg"
+                      alt=""
+                      style="height:100%; width:100%; object-fit:cover; border-radius: 500px"
+                    />
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-lg font-bold">Johann Doe</p>
+                    <small>DESIGNER</small>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  In publishing and graphic design, Lorem ipsum is a placeholder
+                  text commonly used to demonstrate the visual form of a
+                  document or a typeface without relying on meaningful content
+                </div>
               </div>
-            </div>
-            <div class="mt-3">
-              In publishing and graphic design, Lorem ipsum is a placeholder
-              text commonly used to demonstrate the visual form of a document or
-              a typeface without relying on meaningful content
-            </div>
-          </div>
+            </splide-slide>
+
+            <splide-slide>
+              <div class="testimonial__card bg-white shadow py-4 px-4">
+                <div class="flex items-center">
+                  <div style="border-radius: 500px; height:80px; width:80px;">
+                    <img
+                      src="@/static/images/client-3.jpg"
+                      alt=""
+                      style="height:100%; width:100%; object-fit:cover; border-radius: 500px"
+                    />
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-lg font-bold">Johann Doe</p>
+                    <small>DESIGNER</small>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  In publishing and graphic design, Lorem ipsum is a placeholder
+                  text commonly used to demonstrate the visual form of a
+                  document or a typeface without relying on meaningful content
+                </div>
+              </div>
+            </splide-slide>
+
+            <splide-slide>
+              <div class="testimonial__card bg-white shadow py-4 px-4">
+                <div class="flex items-center">
+                  <div style="border-radius: 500px; height:80px; width:80px;">
+                    <img
+                      src="@/static/images/client-4.jpg"
+                      alt=""
+                      style="height:100%; width:100%; object-fit:cover; border-radius: 500px"
+                    />
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-lg font-bold">Johann Doe</p>
+                    <small>DESIGNER</small>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  In publishing and graphic design, Lorem ipsum is a placeholder
+                  text commonly used to demonstrate the visual form of a
+                  document or a typeface without relying on meaningful content
+                </div>
+              </div>
+            </splide-slide>
+          </splide>
         </div>
+
         <!-- End Testimonial Card -->
       </div>
     </div>
@@ -57,7 +110,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      options: {
+        rewind: true,
+        width: 800,
+        perPage: 2,
+        gap: "1rem",
+        pagination: true
+      }
+    };
+  }
+};
 </script>
 
 <style lang="scss"></style>
