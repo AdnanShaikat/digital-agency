@@ -5,19 +5,23 @@
       <h1 class="text-dark text-5xl font-bold mb-6">Awesome Service</h1>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 mb-24 gap-4">
-      <div class="card text-center py-4 px-4 bg-white shadow-lg">
+      <div
+        class="card text-center py-4 px-4 bg-white shadow-lg"
+        v-for="service in services"
+        :key="service.designation"
+      >
         <div class="card__header">
           <Idea height="65px" width="65px" class="mx-auto mb-4 text-primary" />
         </div>
         <div class="card__content">
-          <p class="font-bold text-xl">Web Design</p>
+          <p class="font-bold text-xl">{{ service.designation }}</p>
           <p class="text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            {{ service.quote }}
           </p>
         </div>
       </div>
 
-      <div class="card text-center py-4 px-4 bg-white shadow-lg">
+      <!-- <div class="card text-center py-4 px-4 bg-white shadow-lg">
         <div class="card__header">
           <Research
             height="60px"
@@ -31,9 +35,9 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </p>
         </div>
-      </div>
+      </div> -->
 
-      <div class="card text-center py-4 px-4 bg-white shadow-lg">
+      <!-- <div class="card text-center py-4 px-4 bg-white shadow-lg">
         <div class="card__header">
           <Development
             height="50px"
@@ -47,9 +51,9 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </p>
         </div>
-      </div>
+      </div> -->
 
-      <div class="card text-center py-4 px-4 bg-white shadow-lg">
+      <!-- <div class="card text-center py-4 px-4 bg-white shadow-lg">
         <div class="card__header">
           <Seo height="50px" width="50px" class="mx-auto mb-4 text-primary" />
         </div>
@@ -59,7 +63,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </p>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -75,6 +79,28 @@ export default {
     Research,
     Development,
     Seo
+  },
+  data() {
+    return {
+      services: [
+        {
+          designation: "Web Design",
+          quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        },
+        {
+          designation: "Idea & Research",
+          quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        },
+        {
+          designation: "Web Development",
+          quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        },
+        {
+          designation: "Seo & Marketing",
+          quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        }
+      ]
+    };
   }
 };
 </script>
