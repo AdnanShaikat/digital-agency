@@ -10,93 +10,28 @@
 
         <div class="flex justify-center items-center">
           <splide :options="options">
-            <splide-slide>
+            <splide-slide
+              v-for="testimonial in testimonials"
+              :key="testimonial.clientName"
+            >
               <div class="testimonial__card bg-white shadow py-4 px-4">
                 <div class="flex items-center">
                   <div style="border-radius: 500px; height:80px; width:80px;">
                     <img
-                      src="@/static/images/client-1.jpg"
+                      :src="testimonial.imgUrl"
                       alt=""
                       style="height:100%; width:100%; object-fit:cover; border-radius: 500px"
                     />
                   </div>
                   <div class="ml-3">
-                    <p class="text-lg font-bold">Johann Doe</p>
-                    <small>DESIGNER</small>
+                    <p class="text-lg font-bold">
+                      {{ testimonial.clientName }}
+                    </p>
+                    <small>{{ testimonial.designation }}</small>
                   </div>
                 </div>
-                <div class="mt-3 text-justify">
-                  In publishing and graphic design, Lorem ipsum is a placeholder
-                  text commonly used to demonstrate the visual form of a
-                  document or a typeface without relying on meaningful content
-                </div>
-              </div>
-            </splide-slide>
-            <splide-slide>
-              <div class="testimonial__card bg-white shadow py-4 px-4">
-                <div class="flex items-center">
-                  <div style="border-radius: 500px; height:80px; width:80px;">
-                    <img
-                      src="@/static/images/client-2.jpg"
-                      alt=""
-                      style="height:100%; width:100%; object-fit:cover; border-radius: 500px"
-                    />
-                  </div>
-                  <div class="ml-3">
-                    <p class="text-lg font-bold">Johann Doe</p>
-                    <small>DESIGNER</small>
-                  </div>
-                </div>
-                <div class="mt-3 text-justify">
-                  In publishing and graphic design, Lorem ipsum is a placeholder
-                  text commonly used to demonstrate the visual form of a
-                  document or a typeface without relying on meaningful content
-                </div>
-              </div>
-            </splide-slide>
-
-            <splide-slide>
-              <div class="testimonial__card bg-white shadow py-4 px-4">
-                <div class="flex items-center">
-                  <div style="border-radius: 500px; height:80px; width:80px;">
-                    <img
-                      src="@/static/images/client-3.jpg"
-                      alt=""
-                      style="height:100%; width:100%; object-fit:cover; border-radius: 500px"
-                    />
-                  </div>
-                  <div class="ml-3">
-                    <p class="text-lg font-bold">Johann Doe</p>
-                    <small>DESIGNER</small>
-                  </div>
-                </div>
-                <div class="mt-3 text-justify">
-                  In publishing and graphic design, Lorem ipsum is a placeholder
-                  text commonly used to demonstrate the visual form of a
-                  document or a typeface without relying on meaningful content
-                </div>
-              </div>
-            </splide-slide>
-
-            <splide-slide>
-              <div class="testimonial__card bg-white shadow py-4 px-4">
-                <div class="flex items-center">
-                  <div style="border-radius: 500px; height:80px; width:80px;">
-                    <img
-                      src="@/static/images/client-4.jpg"
-                      alt=""
-                      style="height:100%; width:100%; object-fit:cover; border-radius: 500px"
-                    />
-                  </div>
-                  <div class="ml-3">
-                    <p class="text-lg font-bold">Johann Doe</p>
-                    <small>DESIGNER</small>
-                  </div>
-                </div>
-                <div class="mt-3 text-justify">
-                  In publishing and graphic design, Lorem ipsum is a placeholder
-                  text commonly used to demonstrate the visual form of a
-                  document or a typeface without relying on meaningful content
+                <div class="mt-4 text-justify">
+                  {{ testimonial.quote }}
                 </div>
               </div>
             </splide-slide>
@@ -120,7 +55,37 @@ export default {
         gap: "1rem",
         pagination: true,
         arrows: true
-      }
+      },
+      testimonials: [
+        {
+          imgUrl: "/images/client-1.jpg",
+          clientName: "John Doe",
+          designation: "Designer",
+          quote:
+            "ZenDesk’s testimonial page is beautifully laid out AND functional, with a silent customer video playing on loop to serve as the banner."
+        },
+        {
+          imgUrl: "/images/client-2.jpg",
+          clientName: "Adam Doe",
+          designation: "Designer",
+          quote:
+            "ZenDesk’s testimonial page is beautifully laid out AND functional, with a silent customer video playing on loop to serve as the banner."
+        },
+        {
+          imgUrl: "/images/client-3.jpg",
+          clientName: "Jonson Doe",
+          designation: "Developer",
+          quote:
+            "ZenDesk’s testimonial page is beautifully laid out AND functional, with a silent customer video playing on loop to serve as the banner."
+        },
+        {
+          imgUrl: "/images/client-4.jpg",
+          clientName: "David Doe",
+          designation: "Developer",
+          quote:
+            "ZenDesk’s testimonial page is beautifully laid out AND functional, with a silent customer video playing on loop to serve as the banner."
+        }
+      ]
     };
   }
 };
