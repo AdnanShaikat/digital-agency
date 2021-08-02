@@ -87,6 +87,13 @@ export default {
         }
       ]
     };
+  },
+  created() {
+    fetch("http://localhost:1337/testimonials")
+      .then(res => res.json())
+      .then(data => {
+        this.testimonials = data;
+      });
   }
 };
 </script>
