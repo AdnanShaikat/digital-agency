@@ -6,7 +6,11 @@
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-4 mb-24">
       <div v-for="portfolio in portfolios" :key="portfolio.imgUrl">
-        <img :src="portfolio.imgUrl" class="h-96 w-96" alt="" />
+        <img
+          :src="`http://localhost:1337${portfolio.image.url}`"
+          class="h-96 w-96"
+          alt=""
+        />
       </div>
     </div>
   </div>
@@ -18,20 +22,28 @@ export default {
   data() {
     return {
       portfolios: [
-        {
-          imgUrl: "/images/portfolio-1.jpg"
-        },
-        {
-          imgUrl: "/images/portfolio-2.jpg"
-        },
-        {
-          imgUrl: "/images/portfolio-3.jpg"
-        },
-        {
-          imgUrl: "/images/portfolio-4.jpg"
-        }
+        // {
+        //   imgUrl: "/images/portfolio-1.jpg"
+        // },
+        // {
+        //   imgUrl: "/images/portfolio-2.jpg"
+        // },
+        // {
+        //   imgUrl: "/images/portfolio-3.jpg"
+        // },
+        // {
+        //   imgUrl: "/images/portfolio-4.jpg"
+        // }
       ]
     };
+  },
+  created() {
+    fetch("http://localhost:1337/portfolios")
+      .then(res => res.json())
+      .then(data => {
+        this.portfolios = data;
+        console.log(data);
+      });
   }
 };
 </script>
