@@ -12,13 +12,13 @@
           <splide :options="options">
             <splide-slide
               v-for="testimonial in testimonials"
-              :key="testimonial.clientName"
+              :key="testimonial.id"
             >
               <div class="testimonial__card bg-white shadow py-4 px-4">
                 <div class="flex items-center">
                   <div style="border-radius: 500px; height:80px; width:80px;">
                     <img
-                      :src="testimonial.imgUrl"
+                      :src="`http://localhost:1337${testimonial.imgUrl.url}`"
                       alt=""
                       style="height:100%; width:100%; object-fit:cover; border-radius: 500px"
                     />
@@ -30,9 +30,7 @@
                     <small>{{ testimonial.designation }}</small>
                   </div>
                 </div>
-                <div class="mt-4 text-justify">
-                  {{ testimonial.quote }}
-                </div>
+                <div v-html="testimonial.quote" class="mt-4 text-justify"></div>
               </div>
             </splide-slide>
           </splide>
@@ -46,6 +44,7 @@
 
 <script>
 export default {
+  name: "testimonials",
   data() {
     return {
       options: {
@@ -56,36 +55,37 @@ export default {
         pagination: true,
         arrows: true
       },
-      testimonials: [
-        {
-          imgUrl: "/images/client-1.jpg",
-          clientName: "John Doe",
-          designation: "Designer",
-          quote:
-            "ZenDesk’s testimonial page is beautifully laid out AND functional, with a silent customer video playing on loop to serve as the banner."
-        },
-        {
-          imgUrl: "/images/client-2.jpg",
-          clientName: "Adam Doe",
-          designation: "Designer",
-          quote:
-            "ZenDesk’s testimonial page is beautifully laid out AND functional, with a silent customer video playing on loop to serve as the banner."
-        },
-        {
-          imgUrl: "/images/client-3.jpg",
-          clientName: "Jonson Doe",
-          designation: "Developer",
-          quote:
-            "ZenDesk’s testimonial page is beautifully laid out AND functional, with a silent customer video playing on loop to serve as the banner."
-        },
-        {
-          imgUrl: "/images/client-4.jpg",
-          clientName: "David Doe",
-          designation: "Developer",
-          quote:
-            "ZenDesk’s testimonial page is beautifully laid out AND functional, with a silent customer video playing on loop to serve as the banner."
-        }
-      ]
+      testimonials: []
+      // testimonials: [
+      //   {
+      //     imgUrl: "/images/client-1.jpg",
+      //     clientName: "John Doe",
+      //     designation: "Designer",
+      //     quote:
+      //       "ZenDesk’s testimonial page is beautifully laid out AND functional, with a silent customer video playing on loop to serve as the banner."
+      //   },
+      //   {
+      //     imgUrl: "/images/client-2.jpg",
+      //     clientName: "Adam Doe",
+      //     designation: "Designer",
+      //     quote:
+      //       "ZenDesk’s testimonial page is beautifully laid out AND functional, with a silent customer video playing on loop to serve as the banner."
+      //   },
+      //   {
+      //     imgUrl: "/images/client-3.jpg",
+      //     clientName: "Jonson Doe",
+      //     designation: "Developer",
+      //     quote:
+      //       "ZenDesk’s testimonial page is beautifully laid out AND functional, with a silent customer video playing on loop to serve as the banner."
+      //   },
+      //   {
+      //     imgUrl: "/images/client-4.jpg",
+      //     clientName: "David Doe",
+      //     designation: "Developer",
+      //     quote:
+      //       "ZenDesk’s testimonial page is beautifully laid out AND functional, with a silent customer video playing on loop to serve as the banner."
+      //   }
+      // ]
     };
   },
   created() {
@@ -93,6 +93,7 @@ export default {
       .then(res => res.json())
       .then(data => {
         this.testimonials = data;
+        console.log(data);
       });
   }
 };

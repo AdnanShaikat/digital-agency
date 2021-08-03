@@ -20,50 +20,6 @@
           </p>
         </div>
       </div>
-
-      <!-- <div class="card text-center py-4 px-4 bg-white shadow-lg">
-        <div class="card__header">
-          <Research
-            height="60px"
-            width="60px"
-            class="mx-auto mb-4 text-primary"
-          />
-        </div>
-        <div class="card__content">
-          <p class="font-bold text-xl">Idea & Research</p>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
-          </p>
-        </div>
-      </div> -->
-
-      <!-- <div class="card text-center py-4 px-4 bg-white shadow-lg">
-        <div class="card__header">
-          <Development
-            height="50px"
-            width="50px"
-            class="mx-auto mb-4 text-primary"
-          />
-        </div>
-        <div class="card__content">
-          <p class="font-bold text-xl">Web Development</p>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
-          </p>
-        </div>
-      </div> -->
-
-      <!-- <div class="card text-center py-4 px-4 bg-white shadow-lg">
-        <div class="card__header">
-          <Seo height="50px" width="50px" class="mx-auto mb-4 text-primary" />
-        </div>
-        <div class="card__content">
-          <p class="font-bold text-xl">Seo & Marketing</p>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
-          </p>
-        </div>
-      </div> -->
     </div>
   </div>
 </template>

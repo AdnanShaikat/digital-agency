@@ -6,7 +6,7 @@
         <h1 class="text-5xl font-bold">Choose Our Plans</h1>
       </div>
 
-      <div class="flex items-center justify-center gap-4">
+      <div class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-4">
         <div v-for="pricing in pricings" :key="pricing.packageName">
           <div class="pricing-card bg-white shadow py-4 px-4">
             <div class="pricing-card__header text-center">

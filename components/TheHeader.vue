@@ -7,7 +7,7 @@
           <nuxt-link to="/"><p>BRAND</p></nuxt-link>
         </div>
         <!-- nav -->
-        <div class="hidden lg:block">
+        <!-- <div class="hidden lg:block">
           <ul class="m-0 p-0 h-100 flex items-center z-0">
             <li class="font-bold h-100 hover:text-primary">
               <nuxt-link class="px-3" to="/home">Home</nuxt-link>
@@ -28,10 +28,10 @@
               <nuxt-link class="px-3" to="/contact">Contact</nuxt-link>
             </li>
           </ul>
-        </div>
+        </div> -->
 
         <!-- hidden nav -->
-        <!-- <div class="lg:block" :class="{ hidden: hideNav }">
+        <div class="lg:block" :class="{ hidden: hideNav }">
           <ul
             class="m-0 p-0 h-100 lg:flex absolute right-0 top-full h-auto w-full items-center bg-white lg:bg-transparent lg:static z-0"
           >
@@ -78,8 +78,9 @@
               >
             </li>
           </ul>
-        </div> -->
-        <div class="hidden lg:block">
+        </div>
+
+        <!-- <div class="hidden lg:block">
           <div class="flex items-center justify-items-center">
             <i class="fas fa-search z-20"></i>
             <div
@@ -92,15 +93,18 @@
               <button class="text-white z-10">Call Now: 01627125430</button>
             </div>
           </div>
-        </div>
-        <div class="menu-bar lg:hidden z-20">
+        </div> -->
+
+        <!-- <div class="menu-bar lg:hidden z-20">
           <i @click="toggleBar" class="fas fa-bars text-primary text-2xl"></i>
-        </div>
+        </div> -->
       </div>
     </nav>
 
     <!-- Sidebar Nav -->
-    <div class="sidebar lg:hidden" :class="{ hidden: hideNav }">
+
+    <!-- <div class="sidebar lg:hidden" :class="{ hidden: hideNav }">
+      
       <div class="sidebar__container">
         <ul class="sidebar__links mt-5">
           <li class="sidebar__item font-bold h-100 ">
@@ -148,7 +152,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- End Sidebar Nav -->
 
     <TheHero />

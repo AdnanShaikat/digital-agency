@@ -1,26 +1,37 @@
 <template>
   <div>
     <div class="text-center mb-5">
-      <p class="text-lg text-primary font-bold">Portfolio</p>
-      <h1 class="text-5xl text-dark text-font">See Our Work Project</h1>
+      <p class="text-lg text-primary font-bold">PORTFOLIO</p>
+      <h1 class="text-5xl text-dark font-bold">See Our Work Project</h1>
     </div>
-    <div class="flex items-center mb-24">
-      <div>
-        <img src="@/static/images/portfolio-1.jpg" class="h-96 w-96" alt="" />
-      </div>
-      <div>
-        <img src="@/static/images/portfolio-2.jpg" class="h-96 w-96" alt="" />
-      </div>
-      <div>
-        <img src="@/static/images/portfolio-3.jpg" class="h-96 w-96" alt="" />
-      </div>
-      <div>
-        <img src="@/static/images/portfolio-4.jpg" class="h-96 w-96" alt="" />
+    <div class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-4 mb-24">
+      <div v-for="portfolio in portfolios" :key="portfolio.imgUrl">
+        <img :src="portfolio.imgUrl" class="h-96 w-96" alt="" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "portfolio",
+  data() {
+    return {
+      portfolios: [
+        {
+          imgUrl: "/images/portfolio-1.jpg"
+        },
+        {
+          imgUrl: "/images/portfolio-2.jpg"
+        },
+        {
+          imgUrl: "/images/portfolio-3.jpg"
+        },
+        {
+          imgUrl: "/images/portfolio-4.jpg"
+        }
+      ]
+    };
+  }
+};
 </script>
