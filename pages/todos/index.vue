@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center">
+  <div class="container">
     <div v-for="todo in todos" :key="todo.id">
       <nuxt-link :to="`/todos/${todo.id}`">{{ todo.title }}</nuxt-link>
     </div>

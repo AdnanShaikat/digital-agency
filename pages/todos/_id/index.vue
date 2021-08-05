@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div class="container">
     Todo Index page {{ $route.params.id }}
-    <p>{{ todo.title }}</p>
+    <p class="text-primary font-bold text-5xl my-5">{{ todo.title }}</p>
+    <p class="text-dark font-bold text-2xl">{{ todo.description }}</p>
   </div>
 </template>
 
