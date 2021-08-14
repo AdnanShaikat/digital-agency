@@ -55,7 +55,7 @@
 
     <!-- Sidebar Nav -->
 
-    <div class="sidebar lg:hidden">
+    <div @click="sideBar" class="sidebar lg:hidden" :class="sideNav ? 'sidenave-remove' : 'sidenave-show' ">
       <transition name="fade">
         <div v-if="hideNav" class="sidebar__container">
           <ul class="sidebar__links mt-5">
@@ -123,14 +123,18 @@ export default {
   data() {
     return {
       hideNav: false,
-      sideNav: false,
+      sideNav: true,
     };
   },
   methods: {
     toggleBar() {
       this.hideNav = !this.hideNav;
-      this.sideNav = !this.sideNave;
+      this.sideNav = !this.sideNav;
     },
+    sideBar() {
+      this.sideNav = !this.sideNav;
+      this.hideNav = !this.hideNav;
+    }
   },
 };
 </script>
@@ -141,6 +145,12 @@ export default {
 }
 nav button {
   padding: 5px 15px;
+}
+.sidenave-show {
+  height: 100%;
+}
+.sidenave-remove {
+  height: 0;
 }
 .fade-enter-from {
   transform: translateX(100%);
@@ -160,4 +170,6 @@ nav button {
 .fade-leave-active {
   transition: all 300ms ease-out;
 }
+
+
 </style>
