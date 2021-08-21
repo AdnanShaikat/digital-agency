@@ -52,7 +52,7 @@
 
     <!-- Sidebar Nav -->
 
-    <div class="sidebar lg:hidden">
+    <div @click="sideBar" class="sidebar lg:hidden" :class="sideNav ? 'sidenave-remove' : 'sidenave-show' ">
       <transition name="fade">
         <div v-if="hideNav" class="sidebar__container">
           <ul class="sidebar__links mt-5">
@@ -116,6 +116,7 @@ export default {
   data() {
     return {
       hideNav: false,
+<<<<<<< HEAD
       services: [
         {
           title: "Web",
@@ -130,12 +131,23 @@ export default {
           link: "#",
         },
       ],
+=======
+      sideNav: true,
+>>>>>>> ab82d42a142426d599ec6d65a91d3c3d3f296271
     };
   },
   methods: {
     toggleBar() {
       this.hideNav = !this.hideNav;
+<<<<<<< HEAD
+=======
+      this.sideNav = !this.sideNav;
+>>>>>>> ab82d42a142426d599ec6d65a91d3c3d3f296271
     },
+    sideBar() {
+      this.sideNav = !this.sideNav;
+      this.hideNav = !this.hideNav;
+    }
   },
 };
 </script>
@@ -146,6 +158,12 @@ export default {
 }
 nav button {
   padding: 5px 15px;
+}
+.sidenave-show {
+  height: 100%;
+}
+.sidenave-remove {
+  height: 0;
 }
 .fade-enter-from {
   transform: translateX(100%);
@@ -165,4 +183,6 @@ nav button {
 .fade-leave-active {
   transition: all 300ms ease-out;
 }
+
+
 </style>
