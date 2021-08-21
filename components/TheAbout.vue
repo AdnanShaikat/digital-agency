@@ -1,19 +1,11 @@
 <template>
   <div class="container mx-auto mb-24" style="postion: relative;">
     <div class="shape-2">
-      <img
-        src="@/static/svgs/bgshape-1.svg"
-        style="height: 686px; width: 685px; position: absolute; top: 900px; left: -40px; opacity: 5%;"
-        alt=""
-      />
+      <img src="@/static/svgs/bgshape-1.svg" style="height: 686px; width: 685px; position: absolute; top: 900px; left: -40px; opacity: 5%;" alt="" />
     </div>
     <div class="flex flex-col items-center lg:flex-row lg:justify-between">
       <div class="">
-        <img
-          src="@/static/svgs/about.svg"
-          style="height: 630px; width: 630px;"
-          alt=""
-        />
+        <img src="@/static/svgs/about.svg" style="height: 630px; width: 630px;" alt="" />
       </div>
       <div class="lg:ml-36 mt-6">
         <p class="text-lg font-bold text-primary">About Us</p>
@@ -62,11 +54,8 @@
             </div>
           </div>
         </div>
-        <div
-          style="background-image: linear-gradient(#FF5464, #FC9547);"
-          class="rounded inline-block mt-8"
-        >
-          <button class="text-white py-2 px-6">Read More</button>
+        <div style="background-image: linear-gradient(#FF5464, #FC9547);" class="rounded inline-block mt-8">
+          <button @click="toggleBar" class="text-white py-2 px-6">Read More</button>
         </div>
       </div>
     </div>

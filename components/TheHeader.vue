@@ -4,27 +4,27 @@
     <nav class="container">
       <div class="p-0 m-0 mx-auto flex items-center relative justify-between">
         <div class="brand z-10 text-primary">
-          <nuxt-link to="/"><p>BRAND</p></nuxt-link>
+          <nuxt-link to="/">
+            <p>BRAND</p>
+          </nuxt-link>
         </div>
         <!-- nav -->
         <div class="hidden lg:block">
           <ul class="m-0 p-0 h-100 flex items-center z-0">
-            <li class="font-bold h-100 hover:text-primary">
+            <li class="menu-item font-bold h-100 hover:text-primary">
               <nuxt-link class="px-3" to="/home">Home</nuxt-link>
             </li>
-            <li class="font-bold h-100 hover:text-primary">
+            <li class="menu-item font-bold h-100 hover:text-primary">
               <nuxt-link class="px-3" to="/about">About Us</nuxt-link>
             </li>
-            <li class="font-bold h-100 hover:text-primary">
-              <nuxt-link class="px-3" to="/service">Service</nuxt-link>
-            </li>
-            <li class="font-bold h-100 hover:text-primary">
+            <TheDropdown title="services" :items="services" class="font-bold" />
+            <li class="menu-item font-bold h-100 hover:text-primary">
               <nuxt-link class="px-3" to="/pages">Pages</nuxt-link>
             </li>
-            <li class="font-bold h-100 hover:text-primary">
+            <li class="menu-item font-bold h-100 hover:text-primary">
               <nuxt-link class="px-3" to="/blog">Blog</nuxt-link>
             </li>
-            <li class="font-bold h-100 hover:text-primary">
+            <li class="menu-item font-bold h-100 hover:text-primary">
               <nuxt-link class="px-3" to="/contact">Contact</nuxt-link>
             </li>
           </ul>
@@ -35,13 +35,10 @@
         <div class="hidden lg:block">
           <div class="flex items-center justify-items-center">
             <i class="fas fa-search z-20"></i>
-            <div
-              style="
+            <div style="
                 background-image: linear-gradient(#ff5464, #fc9547);
                 margin-left: 10px;
-              "
-              class="rounded"
-            >
+              " class="rounded">
               <button class="text-white z-10">Call Now: 01627125430</button>
             </div>
           </div>
@@ -86,22 +83,17 @@
 
           <div class="mt-5" style="padding: 10px 20px">
             <div class="flex flex-col items-center justify-center">
-              <div
-                class="
+              <div class="
                   text-center text-white
                   bg-primary
                   w-full
                   py-4
                   mb-2
                   rounded
-                "
-              >
+                ">
                 <i class="fas fa-search"></i>
               </div>
-              <div
-                style="background-image: linear-gradient(#ff5464, #fc9547)"
-                class="rounded w-full text-center py-4"
-              >
+              <div style="background-image: linear-gradient(#ff5464, #fc9547)" class="rounded w-full text-center py-4">
                 <button class="text-white">Call Now: 01627125430</button>
               </div>
             </div>
@@ -118,18 +110,31 @@
 
 <script>
 import TheHero from "../components/TheHero.vue";
+import TheDropdown from "../components/layouts/TheDropdown.vue";
 export default {
-  components: { TheHero },
+  components: { TheHero, TheDropdown },
   data() {
     return {
       hideNav: false,
-      sideNav: false,
+      services: [
+        {
+          title: "Web",
+          link: "#",
+        },
+        {
+          title: "Designe",
+          link: "#",
+        },
+        {
+          title: "Vedio",
+          link: "#",
+        },
+      ],
     };
   },
   methods: {
     toggleBar() {
       this.hideNav = !this.hideNav;
-      this.sideNav = !this.sideNave;
     },
   },
 };

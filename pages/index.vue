@@ -8,6 +8,7 @@
     <ThePricingPlan />
     <ThePortfolio />
     <TheBlog />
+
   </div>
 </template>
 
@@ -20,6 +21,7 @@ import TheTestimonial from "../components/layouts/TheTestimonial.vue";
 import ThePricingPlan from "../components/layouts/ThePricingPlan.vue";
 import ThePortfolio from "../components/layouts/ThePortfolio.vue";
 import TheBlog from "../components/layouts/TheBlog.vue";
+
 export default {
   components: {
     TheHeader,
@@ -29,7 +31,7 @@ export default {
     TheTestimonial,
     ThePricingPlan,
     ThePortfolio,
-    TheBlog
-  }
+    TheBlog,
+  },
 };
 </script>
