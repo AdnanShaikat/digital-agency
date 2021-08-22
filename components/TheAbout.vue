@@ -55,7 +55,7 @@
           </div>
         </div>
         <div style="background-image: linear-gradient(#FF5464, #FC9547);" class="rounded inline-block mt-8">
-          <button @click="toggleBar" class="text-white py-2 px-6">Read More</button>
+          <button class="text-white py-2 px-6">Read More</button>
         </div>
       </div>
     </div>

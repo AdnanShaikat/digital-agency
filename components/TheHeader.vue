@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="header__shape z-0"></div>
-    <nav class="container">
+    <nav class="container nav">
       <div class="p-0 m-0 mx-auto flex items-center relative justify-between">
         <div class="brand z-10 text-primary">
           <nuxt-link to="/">
@@ -29,9 +29,11 @@
             </li>
           </ul>
         </div>
-
-        <!-- hidden nav -->
-
+        <!-- Shopping Cart -->
+        <div class="nav__cart">
+          <button></button>
+        </div>
+        <!-- End Shopping Cart -->
         <div class="hidden lg:block">
           <div class="flex items-center justify-items-center">
             <i class="fas fa-search z-20"></i>
@@ -116,7 +118,7 @@ export default {
   data() {
     return {
       hideNav: false,
-<<<<<<< HEAD
+      sideNav: true,
       services: [
         {
           title: "Web",
@@ -131,23 +133,17 @@ export default {
           link: "#",
         },
       ],
-=======
-      sideNav: true,
->>>>>>> ab82d42a142426d599ec6d65a91d3c3d3f296271
     };
   },
   methods: {
     toggleBar() {
       this.hideNav = !this.hideNav;
-<<<<<<< HEAD
-=======
       this.sideNav = !this.sideNav;
->>>>>>> ab82d42a142426d599ec6d65a91d3c3d3f296271
     },
     sideBar() {
       this.sideNav = !this.sideNav;
       this.hideNav = !this.hideNav;
-    }
+    },
   },
 };
 </script>
@@ -183,6 +179,4 @@ nav button {
 .fade-leave-active {
   transition: all 300ms ease-out;
 }
-
-
 </style>

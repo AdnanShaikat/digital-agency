@@ -33,5 +33,10 @@ export default {
     ThePortfolio,
     TheBlog,
   },
+  fetch() {
+    this.$axios.get("/home-page").then((response) => {
+      console.log(response);
+    });
+  },
 };
 </script>

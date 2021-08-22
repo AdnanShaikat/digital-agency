@@ -10,18 +10,11 @@
 
         <div class="flex justify-center items-center">
           <splide :options="options">
-            <splide-slide
-              v-for="testimonial in testimonials"
-              :key="testimonial.id"
-            >
+            <splide-slide v-for="testimonial in testimonials" :key="testimonial.id">
               <div class="testimonial__card bg-white shadow py-4 px-4">
                 <div class="flex items-center">
                   <div style="border-radius: 500px; height:80px; width:80px;">
-                    <img
-                      :src="`http://localhost:1337${testimonial.imgUrl.url}`"
-                      alt=""
-                      style="height:100%; width:100%; object-fit:cover; border-radius: 500px"
-                    />
+                    <img :src="`http://localhost:1337${testimonial.imgUrl.url}`" alt="" style="height:100%; width:100%; object-fit:cover; border-radius: 500px" />
                   </div>
                   <div class="ml-3">
                     <p class="text-lg font-bold">
@@ -53,9 +46,9 @@ export default {
         perPage: 2,
         gap: "1rem",
         pagination: true,
-        arrows: true
+        arrows: true,
       },
-      testimonials: []
+      testimonials: [],
       // testimonials: [
       //   {
       //     imgUrl: "/images/client-1.jpg",
@@ -89,13 +82,13 @@ export default {
     };
   },
   created() {
-    fetch("http://localhost:1337/testimonials")
-      .then(res => res.json())
-      .then(data => {
-        this.testimonials = data;
-        console.log(data);
-      });
-  }
+    // fetch("http://localhost:1337/testimonials")
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     this.testimonials = data;
+    //     console.log(data);
+    //   });
+  },
 };
 </script>
 
