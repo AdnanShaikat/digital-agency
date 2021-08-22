@@ -106,7 +106,7 @@
 
     <!-- End Sidebar Nav -->
 
-    <TheHero />
+    <TheHero :hero="hero" />
   </div>
 </template>
 
@@ -143,6 +143,11 @@ export default {
     sideBar() {
       this.sideNav = !this.sideNav;
       this.hideNav = !this.hideNav;
+    },
+  },
+  props: {
+    hero: {
+      type: Object,
     },
   },
 };

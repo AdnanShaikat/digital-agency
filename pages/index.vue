@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TheHeader />
+    <TheHeader v-if="homePage" :hero="homePage.hero" />
     <TheService />
     <TheAbout />
     <TheNewsLetter />
@@ -23,6 +23,12 @@ import ThePortfolio from "../components/layouts/ThePortfolio.vue";
 import TheBlog from "../components/layouts/TheBlog.vue";
 
 export default {
+  name: "home-page",
+  data() {
+    return {
+      homePage: null,
+    };
+  },
   components: {
     TheHeader,
     TheService,
@@ -33,9 +39,9 @@ export default {
     ThePortfolio,
     TheBlog,
   },
-  fetch() {
-    this.$axios.get("/home-page").then((response) => {
-      console.log(response);
+  created() {
+    this.$axios.$get("/home-page").then((response) => {
+      this.homePage = response;
     });
   },
 };
